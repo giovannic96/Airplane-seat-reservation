@@ -1,0 +1,313 @@
+html, body, h1, h2, h3, h4, h5, h6, span, label {
+  font-family: 'HelveticaNeue-CondensedBlack', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+} 
+
+.main-color {
+  color: #05164d;
+}
+
+.main-back-color {
+  background-color: #05164d;
+}
+
+.error-back-color {
+  background-color: #ffdad8;
+}
+
+.my-margin-top {
+  margin-top: 45px;
+}
+
+#avatar-name {
+  text-align: start;
+  font-size: 22px;
+  color: black;
+}
+
+#no-js {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+input[type=button]:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input[type=submit]:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #52627c;
+}
+
+header h1 {
+  margin: 0px;
+  font-weight: 900;
+  line-height: 2.4;
+  text-align: center;
+}
+
+#content-wrapper {
+  margin-bottom: 80px;
+}
+
+footer {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  color: #dcdcdc;
+  font-size: 13px;
+}
+
+p:hover i {
+  animation: shake 0.7s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-2.5px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2.5px, 0, 0);
+  }
+}
+
+/* LOGIN FORM */
+.login-form {
+  width: 100%;
+  position: relative;
+}
+
+.input-form {
+  font-size: 15px;
+  line-height: 1.2;
+  position: relative;
+  border-style: none;
+  display: block;
+  width: 100%;
+  height: 55px;
+  padding: 0 35px 0 35px;
+}
+
+.my-input-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-style: none;
+  background-color: #ffad00;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.my-input-btn:hover {
+  background-color: #ffbd32;
+}
+
+form .w3-container div {
+  margin-top: 20px;
+}
+
+/* CABIN SEATS */
+ol {
+  list-style: none;
+  margin: 10px;
+  padding-inline-start: 0px;
+}
+
+.seats {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;  
+}
+
+.seat {
+  display: flex;
+  flex: 0 0 8%;
+  padding-right: 10px;
+  position: relative;  
+}
+
+.seat:nth-child(3) {
+  margin-right: 8%;
+}
+
+.seat-booked {
+  background: #ff7d14;
+}
+
+.seat-booked-by-me {
+  background: #fffb28;
+}
+
+.seat-purchased {
+  background: #f42536;
+  overflow: hidden;
+}
+
+.seat-purchased:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.seat-free {
+  background: #76ef3b;
+}
+
+.seat label {    
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  line-height: 2.8rem;
+  padding: 2px 0;
+  text-align: center;
+  position: relative;
+  animation-duration: 400ms;
+  animation-fill-mode: both;  
+}
+
+.seat input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+.seat input[type=checkbox]:checked + label { /* '+' indicates the element after input[type=checkbox] */
+    -webkit-animation-name: seatChosen;
+    animation-name: seatChosen;
+    animation-duration: 400ms;
+    animation-fill-mode: both;
+}
+
+input[type=checkbox]:disabled + label {
+    overflow: hidden;
+}
+
+input[type=checkbox]:disabled + label:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@-webkit-keyframes seatChosen {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes seatChosen {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
