@@ -188,11 +188,11 @@ function tryLogin($username, $password) {
             } else {
                 if(!mysqli_stmt_fetch($prep))
                     throw new Exception(); 
-                if(password_verify($password, $dbPass)) { //password not correct 
+                if(password_verify($password, $dbPass)) { 
                     mysqli_stmt_close($prep);
                     mysqli_close($con);
                     return LOGIN_OK;
-                } else {
+                } else { //password not correct 
                     mysqli_stmt_close($prep);
                     mysqli_close($con);
                     return LOGIN_NOT_MATCH;
