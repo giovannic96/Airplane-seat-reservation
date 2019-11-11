@@ -5,7 +5,7 @@ header('Location: signup.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_password']) && 
-        !empty($_POST['username'] && !empty($_POST['password']) && !empty($_POST['confirm_password']))) {
+        !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['confirm_password'])) {
 
         $username = $_POST['username'];
         $password = $_POST['password'];
